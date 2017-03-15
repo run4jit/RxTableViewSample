@@ -47,8 +47,7 @@ class ContactListViewController: UIViewController {
             .addDisposableTo(disposeBag)
 
         
-        self.contactTableView
-            .rx
+        self.contactTableView.rx
             .itemSelected
             .map { indexPath in
                 return (indexPath, self.contactListViewModel.contact(for: indexPath))
@@ -57,11 +56,12 @@ class ContactListViewController: UIViewController {
                 self.performSegue(withIdentifier: "ContactDetailViewController", sender: nil)
 //                DefaultWireframe.presentAlert("Tapped `\(model)` @ \(indexPath)")
             })
-            .disposed(by: disposeBag)
+        .dispose()
+//            .disposed(by: self.disposeBag)
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        <#code#>
+        
     }
 }
 

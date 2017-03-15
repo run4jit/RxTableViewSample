@@ -52,12 +52,91 @@
                     <view key="view" contentMode="scaleToFill" id="vkv-LJ-k8l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LuN-TZ-gOl">
+                                <rect key="frame" x="87.5" y="64" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GlW-9u-bFW"/>
+                                    <constraint firstAttribute="width" constant="200" id="VDu-MS-LPa"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHf-s0-0zd" customClass="ProfileDetailRowView" customModule="RxTableViewSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="284" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="84H-E7-Qic"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CE-az-bYA" customClass="ProfileDetailRowView" customModule="RxTableViewSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="344" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7xF-sZ-8Ii"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXZ-FB-Swc" customClass="ProfileDetailRowView" customModule="RxTableViewSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="404" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ler-gV-Bev"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xXZ-FB-Swc" firstAttribute="leading" secondItem="vkv-LJ-k8l" secondAttribute="leading" id="5Ij-PN-stN"/>
+                            <constraint firstItem="RHf-s0-0zd" firstAttribute="leading" secondItem="vkv-LJ-k8l" secondAttribute="leading" id="9z2-Ye-UaN"/>
+                            <constraint firstItem="0CE-az-bYA" firstAttribute="top" secondItem="RHf-s0-0zd" secondAttribute="bottom" id="Fdn-Jc-aYb"/>
+                            <constraint firstItem="0CE-az-bYA" firstAttribute="leading" secondItem="vkv-LJ-k8l" secondAttribute="leading" id="HS5-7g-u72"/>
+                            <constraint firstItem="xXZ-FB-Swc" firstAttribute="top" secondItem="0CE-az-bYA" secondAttribute="bottom" id="Los-Wn-YF3"/>
+                            <constraint firstAttribute="trailing" secondItem="xXZ-FB-Swc" secondAttribute="trailing" id="Nz4-uj-AiV"/>
+                            <constraint firstItem="LuN-TZ-gOl" firstAttribute="top" secondItem="rQV-Ag-4FN" secondAttribute="bottom" constant="44" id="Z0E-an-K8Z"/>
+                            <constraint firstItem="LuN-TZ-gOl" firstAttribute="centerX" secondItem="vkv-LJ-k8l" secondAttribute="centerX" id="deq-v2-iqz"/>
+                            <constraint firstAttribute="trailing" secondItem="RHf-s0-0zd" secondAttribute="trailing" id="lAg-fL-flG"/>
+                            <constraint firstAttribute="trailing" secondItem="0CE-az-bYA" secondAttribute="trailing" id="xDX-NF-Idc"/>
+                            <constraint firstItem="RHf-s0-0zd" firstAttribute="top" secondItem="LuN-TZ-gOl" secondAttribute="bottom" constant="20" id="xvV-x4-PW0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailView" destination="xXZ-FB-Swc" id="J6M-V1-byQ"/>
+                        <outlet property="mobileView" destination="0CE-az-bYA" id="huZ-tG-dLD"/>
+                        <outlet property="nameView" destination="RHf-s0-0zd" id="eqZ-jo-nvZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9N3-ma-15F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="JQZ-ly-ihE" customClass="ProfileDetailRowView" customModule="RxTableViewSample" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzJ-8H-es0">
+                            <rect key="frame" x="20" y="0.0" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="czX-ne-VoJ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJR-4D-76A">
+                            <rect key="frame" x="303" y="54" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="xzJ-8H-es0" secondAttribute="bottom" id="cLD-5c-79c"/>
+                        <constraint firstItem="tJR-4D-76A" firstAttribute="top" secondItem="JQZ-ly-ihE" secondAttribute="top" id="ccG-QB-eXK"/>
+                        <constraint firstItem="xzJ-8H-es0" firstAttribute="top" secondItem="JQZ-ly-ihE" secondAttribute="top" id="fUe-sB-D5w"/>
+                        <constraint firstAttribute="bottom" secondItem="tJR-4D-76A" secondAttribute="bottom" id="w2t-pY-eqL"/>
+                        <constraint firstItem="tJR-4D-76A" firstAttribute="leading" secondItem="xzJ-8H-es0" secondAttribute="trailing" constant="43" id="yJA-cA-kvl"/>
+                        <constraint firstAttribute="trailing" secondItem="tJR-4D-76A" secondAttribute="trailing" id="zyZ-lb-9Vq"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="detailLabel" destination="tJR-4D-76A" id="x5n-sx-a5L"/>
+                        <outlet property="iconImageView" destination="xzJ-8H-es0" id="z04-l5-ruc"/>
+                    </connections>
+                </view>
             </objects>
-            <point key="canvasLocation" x="874" y="122"/>
+            <point key="canvasLocation" x="872.79999999999995" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,10 @@ class ContactDetailViewController: UIViewController {
 
     private var contactDetailViewModel: ContactDetailViewModel?
     
+    @IBOutlet weak var nameView: ProfileDetailRowView!
+    @IBOutlet weak var mobileView: ProfileDetailRowView!
+    @IBOutlet weak var emailView: ProfileDetailRowView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
