@@ -13,10 +13,35 @@ import RxSwift
 import UIKit
 
 class ContactListViewModel {
-    let disposeBag = DisposeBag()
-    var contactManager: ContactManager
+    private let disposeBag = DisposeBag()
+    private var contactManager: ContactManager
+    var contacts = Variable<[Contact]>([])
+    var dataSource = Variable<[Contact]>([])
+
     init(contactManager: ContactManager = ContactManager.share) {
         self.contactManager = contactManager
+        self.bind()
     }
 
+    func contact(for index: IndexPath) -> Contact? {
+        return self.contacts.value[index.row]
+    }
+    func bind() -> Void {
+        contactManager
+            .contacts
+            .asObservable()
+            .bindTo(self.contacts)
+        .addDisposableTo(disposeBag)
+        
+        
+        
+//        contactManager
+//        .contacts
+//        .asObservable()
+//            .subscribe { (contacts: [Contact]) in
+//                contacts
+//                .dis
+//            contacts.map(<#T##transform: (Contact) throws -> T##(Contact) throws -> T#>)
+//        }
+    }
 }

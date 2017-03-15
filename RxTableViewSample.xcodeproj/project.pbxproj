@@ -23,6 +23,8 @@
 		2D9320C41E5E251100FE576A /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9320C31E5E251100FE576A /* ContactListViewModel.swift */; };
 		2DAD09C71E67684000EB0B1C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD09C61E67684000EB0B1C /* Utility.swift */; };
 		4696DC583B59C8E6021F154C /* Pods_RxTableViewSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963DDC69A0E811F83304C039 /* Pods_RxTableViewSample.framework */; };
+		B724C5851E793A74005D9AA3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724C5841E793A74005D9AA3 /* ContactDetailViewController.swift */; };
+		B724C5871E793B55005D9AA3 /* ContactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724C5861E793B55005D9AA3 /* ContactDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		71095D83F19EB4F972975B28 /* Pods-RxTableViewSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxTableViewSample/Pods-RxTableViewSample.release.xcconfig"; sourceTree = "<group>"; };
 		963DDC69A0E811F83304C039 /* Pods_RxTableViewSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableViewSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F13895B8A169FF05FB4736 /* Pods-RxTableViewSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTableViewSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxTableViewSample/Pods-RxTableViewSample.debug.xcconfig"; sourceTree = "<group>"; };
+		B724C5841E793A74005D9AA3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		B724C5861E793B55005D9AA3 /* ContactDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewModel.swift; sourceTree = "<group>"; };
 		E868AA773D583FAE3FAC1F49 /* Pods_RxTableViewSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableViewSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB588BD43CD10E7B7FC36EE /* Pods_RxTableViewSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableViewSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				2D60A2CE1E5DFDB4000B1522 /* AppDelegate.swift */,
+				B724C5841E793A74005D9AA3 /* ContactDetailViewController.swift */,
+				B724C5861E793B55005D9AA3 /* ContactDetailViewModel.swift */,
 				2D9320B91E5E208A00FE576A /* ContactListViewController.swift */,
 				2D9320C31E5E251100FE576A /* ContactListViewModel.swift */,
 				2D9320BA1E5E208A00FE576A /* Contact.swift */,
@@ -248,7 +254,7 @@
 				TargetAttributes = {
 					2D60A2CA1E5DFDB4000B1522 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C7564RV8Y8;
+						DevelopmentTeam = 6TW2SJT2US;
 						ProvisioningStyle = Automatic;
 					};
 					2D60A2E11E5DFDB4000B1522 = {
@@ -368,10 +374,12 @@
 			files = (
 				2D60A2D11E5DFDB4000B1522 /* ViewController.swift in Sources */,
 				2D9320C41E5E251100FE576A /* ContactListViewModel.swift in Sources */,
+				B724C5871E793B55005D9AA3 /* ContactDetailViewModel.swift in Sources */,
 				2DAD09C71E67684000EB0B1C /* Utility.swift in Sources */,
 				2D9320BD1E5E208A00FE576A /* ContactListViewController.swift in Sources */,
 				2D9320BE1E5E208A00FE576A /* Contact.swift in Sources */,
 				2D60A2CF1E5DFDB4000B1522 /* AppDelegate.swift in Sources */,
+				B724C5851E793A74005D9AA3 /* ContactDetailViewController.swift in Sources */,
 				2D9320C01E5E208A00FE576A /* ContactTableViewCell.swift in Sources */,
 				2D9320BF1E5E208A00FE576A /* ContactManager.swift in Sources */,
 				2D60A2D71E5DFDB4000B1522 /* RxTableViewSample.xcdatamodeld in Sources */,
@@ -525,7 +533,7 @@
 			baseConfigurationReference = 98F13895B8A169FF05FB4736 /* Pods-RxTableViewSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C7564RV8Y8;
+				DEVELOPMENT_TEAM = 6TW2SJT2US;
 				INFOPLIST_FILE = RxTableViewSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Krishna.com.RxTableViewSample;
@@ -539,7 +547,7 @@
 			baseConfigurationReference = 71095D83F19EB4F972975B28 /* Pods-RxTableViewSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C7564RV8Y8;
+				DEVELOPMENT_TEAM = 6TW2SJT2US;
 				INFOPLIST_FILE = RxTableViewSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Krishna.com.RxTableViewSample;

@@ -31,9 +31,10 @@ class ContactListViewController: UIViewController {
     private func setupCellConfiguration() {
         //Equivalent of cell for row at index path
         contactTableView.register(UINib(nibName: ContactTableViewCell.Identifier, bundle: nil), forCellReuseIdentifier: ContactTableViewCell.Identifier)
+        
         contactTableView.rowHeight = 70
+        
         self.contactListViewModel
-            .contactManager
             .contacts
             .asObservable()
             .bindTo(contactTableView
@@ -45,6 +46,22 @@ class ContactListViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
 
+        
+        self.contactTableView
+            .rx
+            .itemSelected
+            .map { indexPath in
+                return (indexPath, self.contactListViewModel.contact(for: indexPath))
+            }
+            .subscribe(onNext: { indexPath, model in
+                self.performSegue(withIdentifier: "ContactDetailViewController", sender: nil)
+//                DefaultWireframe.presentAlert("Tapped `\(model)` @ \(indexPath)")
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        <#code#>
     }
 }
 

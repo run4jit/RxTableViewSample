@@ -128,3 +128,12 @@ extension Contact: Serialize
             , favorite: favorite)
     }
 }
+
+class ContactDataSource {
+    let title: String
+    let contacts: [Contact]
+    init(title: String, contacts: [Contact]) {
+        self.title = title
+        self.contacts = contacts
+    }
+}

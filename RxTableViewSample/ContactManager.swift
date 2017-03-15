@@ -47,7 +47,6 @@ class ContactManager {
         }) {
             print("disposeBag")
 
-//            addDisposableTo(disposeBag)
         }.addDisposableTo(disposeBag)
     }
     
